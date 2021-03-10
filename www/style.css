@@ -1,0 +1,13 @@
+
+@font-face {font-family: Helvetica Neue Condensed Bold; src: url(helvetica.ttf); weight: bold;}
+html { align-items: center; color: #ffffff; display: flex; font: 22px "Adult Swim", Helvetica Neue Condensed Bold, monospace; justify-content: center; height: 100%; margin: 0;}
+body { display: flex; margin: 1em; padding: 1em; background-image: url('img/wave.gif'); background-position: center; background-repeat: no-repeat; background-size: cover;}
+h1 { font-size: 2em; grid-column: 1 / -1; margin: 0; line-height: 3em; text-align: center; vertical-align: sub;}
+a { color: inherit; text-decoration: none;}
+a:focus, a:hover { color: #1d81b2;}
+nav { display: grid; grid-row-gap: 2em; grid-template-columns: 2fr 1fr 1fr; margin: auto; min-width: 23em; padding: 1em 1em;}
+ul { list-style-type: none; margin: 0; padding: 1; white-space: nowrap;}
+li:first-child { font-weight: bold; line-height: 2em; text-align: center;}
+li { text-align: center;}
+img.clownkey { float: left; align-self: flex-start; width: 4em;}
+img.ban { border: 0px solid #ffffff; height: auto; object-fit: cover; object-position: 50% 100%; width: 8em;}
