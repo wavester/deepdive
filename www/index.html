@@ -22,20 +22,49 @@
 <meta property="og:description" content="Are you willing to take the plunge into the unknown?">
 <meta property="og:image" content="https://deepdive.gg/img/icon.png">
 <meta charset="UTF-8">
+<script type="text/javascript">
+   $(
+  function(){
+  var aud = $('audio')[0];
+  $('.play-pause').on('click', function(){
+  if (aud.paused) {
+    aud.play();
+    $('.play-pause').removeClass('icon-play');
+    $('.play-pause').addClass('icon-stop');
+  }
+  else {
+    aud.pause();
+    $('.play-pause').removeClass('icon-stop');
+    $('.play-pause').addClass('icon-play');
+  }
+
+})
+  $('.next').on('click', function(){
+  aud.src = 'another audio source';
+})
+  aud.ontimeupdate = function(){
+    $('.progress').css('width', aud.currentTime / aud.duration * 100 + '%')
+  }
+})
+</script>
 </head>
 <body>
 <nav>
 <h1><img class="clownkey" src="img/clownkey.png"></img>[deep dive]</h1>
+<audio autoplay src= 'music/theme.mp3'></audio>
 <ul>
    <li>[community]</li>
    <li><a href="/albumexchange">album exchange.</a></li>
    <li><a href="/invite">discord.</a></li>
-   <li><a href="/radio">dive radio.</a></li>
+   <li><a href="/files">files.</a></li>
+   <li><a href="https://www.deepdiving.shop/">merch.</a></li>
+   <li><a href="/portroyal">port royal.</a></li>
   </ul>
   <ul>
    <li>[instances]</li>
    <li><a href="https://element.deepdive.gg/">chat.</a></li>
-   <li><a href="https://flix.deepdive.gg/">diveflix.</a></li>
+   <li><a href="https://deepdive.gg/flix">diveflix.</a></li>
+   <li><a href="https://music.deepdive.gg/">divemusic.</a></li>
    <li><a href="https://search.deepdive.gg/">search.</a></li> 
    <li><a href="https://tube.deepdive.gg/">tube.</a></li> 
  </ul>

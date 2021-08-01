@@ -1,10 +1,10 @@
 <?php
 	if(isset($_POST['submit'])){
-        $email='info@deepdive.gg';	
+        $email='info@deepdive.gg'; // Sender email	
 		$discord=$_POST['discord'];
 		$album=$_POST['album'];
 
-		$to='sudozelda2@tutanota.com, confirmedwavy@protonmail.com'; // Receiver Email ID, Replace with your email ID
+		$to='<insert email here>'; // Receiver Email ID, Replace with your email ID
 		$subject='A new Album Exchange submission';
 		$message="Discord: ".$discord."\n"."Album link: ".$album;
 		$headers="From: ".$email;

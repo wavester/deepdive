@@ -1,16 +1,15 @@
 <?php
 	if(isset($_POST['submit'])){
         $email='info@deepdive.gg';	
-		$discord=$_POST['discord'];
-		$motivation=$_POST['motivation'];
+		$minecraft=$_POST['minecraft'];
 
 		$to='<insert email here>'; // Receiver Email ID, Replace with your email ID
-		$subject='A new Staff application';
-		$message="Discord: ".$discord."\n"."The reason they wanna become staff: ".$motivation;
+		$subject='A new Realms invitation request';
+		$message="Minecraft Username: ".$minecraft;
 		$headers="From: ".$email;
 
 		if(mail($to, $subject, $message, $headers)){
-			header('Location: submitted_app.html');
+			header('Location: index.html');
 		}
 		else{
 			header('Location: requestfail.html');
