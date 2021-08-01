@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  EXAMPLE: A valid configuration that contains the absolute minimum
+
+  This configuration streams Ogg files as-is.
+  -->
+
+<ezstream>
+
+  <servers>
+    <server>
+      <hostname>127.0.0.1</hostname>
+      <port>8003</port>
+      <password>Gottagofast24</password>
+    </server>
+  </servers>
+
+    <streams>
+    <stream>
+      <mountpoint>/stream</mountpoint>
+      <public>Yes</public>
+      <format>MP3</format>
+      <stream_name>[dive radio]</stream_name>
+      <stream_url>https://radio.deepdive.gg/</stream_url>
+      <stream_genre>Various</stream_genre>
+      <stream_description>Lofi hiphop beats to beat your wife to.</stream_description>
+      <stream_quality>1.5</stream_quality>
+      <stream_bitrate>320</stream_bitrate>
+      <stream_samplerate>44100</stream_samplerate>
+      <stream_channels>2</stream_channels>
+    </stream>
+  </streams>
+
+  <intakes>
+    <intake>
+	    <filename>/home/wavy/instances/diveradio/main.txt</filename>
+      <shuffle>Yes</shuffle>
+      <stream_once>No</stream_once>
+    </intake>
+  </intakes>
+
+</ezstream>

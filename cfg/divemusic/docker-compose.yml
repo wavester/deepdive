@@ -1,0 +1,22 @@
+version: '2.4'
+services:
+  gonic:
+    image: sentriz/gonic:latest
+    environment:
+    - TZ
+    - GONIC_PROXY_PREFIX=/   
+ # optionally, see more env vars below
+    ports:
+    - 8029:80
+    volumes:
+    - ./data:/data                # gonic db etc
+    - /home/wavy/media/music:/music:ro    # your music
+    - /home/wavy/media/podcasts:/podcasts # your podcasts
+    - /home/wavy/.cache/gonic:/cache       # transcode / covers / etc cache dir
+
+    # set the following two sections if you've enabled jukebox
+    group_add:
+    - audio
+    devices:
+    - /dev/snd:/dev/snd
+
